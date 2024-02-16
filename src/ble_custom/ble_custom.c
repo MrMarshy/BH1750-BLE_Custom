@@ -217,10 +217,4 @@ static int bt_le_lux_publish(struct bt_conn *conn, uint16_t lux_value){
 	else{
 		return -EINVAL;
 	}
-
-	// int rc;
-	// rc = bt_gatt_notify_uuid(current_bt_conn, BT_UUID_TEMPERATURE, NULL, &temp, sizeof(temp));
-	// rc = bt_gatt_notify_uuid(current_bt_conn, BT_UUID_PRESSURE, NULL, &press, sizeof(press));
-	// rc = bt_gatt_notify_uuid(current_bt_conn, BT_UUID_HUMIDITY, NULL, &humid, sizeof(humid));
-	// return rc == -ENOTCONN ? 0 : rc;
 }
