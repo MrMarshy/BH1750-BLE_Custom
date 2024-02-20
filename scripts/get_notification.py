@@ -7,8 +7,7 @@ LUX_CHAR_UUID    = "e552241e-773c-1246-987d-8417d304edb6"
 
 def lux_level_changed(handle: int, data: bytearray):
     """ Show the lux level """
-    print("Lux Level: {}".format(data[0]))
-    print("DATA: {}".format(data))
+    print("Lux Level: {}".format(int.from_bytes(data, byteorder='little', signed=True)))
 
 async def main(address):
     """Connect to device and subscribe to its Lux Level notificatins."""
